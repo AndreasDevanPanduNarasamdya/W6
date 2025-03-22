@@ -3,17 +3,21 @@
 
 typedef struct
 {
-    char Nama[50];
+    char *Nama;
     int Nilai_UTS_SDA;
-    struct List1* Next;
+    struct List *Next;
+    struct List1 *Before;
 }List1;
 
 typedef struct
 {
-    char* Nama;
+    char *Nama;
     int Nilai_UTS_SDA;
-    struct List2* Next;
+    struct List2 *Next;
+    struct List2 *Before;
 }List2;
+
+char alphabet[26] = {"A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"};
 
 
 void creator_constructor();

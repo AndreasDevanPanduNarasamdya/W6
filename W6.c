@@ -5,15 +5,20 @@
 #include "Mahasiswa.h"
 #include "Mahasiswa.c"
 
-int main()
+int main() 
 {
-    List1 *L1;
-    List2 L2;
-    int tempscore;
-    char* tempname;
+    List1 *myList = NULL;
 
-    creator_constructor(&L1, &tempname, &tempscore);
-    PrintObject(&L1);
+    // Initialize list with first node
+    Initiate(&myList, "John", 85);
+
+    // Add more nodes
+    creator_constructor(&myList, "Alice", 90);
+    creator_constructor(&myList, "Bob", 75);
+
+    // Print the linked list
+    printf("Printing Linked List:\n");
+    PrintObject(myList);
 
     return 0;
 }
